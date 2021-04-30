@@ -106,12 +106,12 @@ fn main() {
 ---
 # fmt::Display
 
-```rust
+```
 {} -> fmt::Display がコールされる
 {:?} -> fmt::Debug がコールされる
 ```
 * 例１
-```
+```rust
 use std::fmt;
 
 #[derive(Debug)]
