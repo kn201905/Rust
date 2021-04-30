@@ -50,7 +50,7 @@ cargo run
 
 ---
 # デバッグプリント
-```
+```rust
 #[derive(Debug)]
 struct TestStruct(i32);
 
@@ -106,7 +106,7 @@ fn main() {
 ---
 # fmt::Display
 
-```
+```rust
 {} -> fmt::Display がコールされる
 {:?} -> fmt::Debug がコールされる
 ```
@@ -160,7 +160,7 @@ fn main() {
 ```
 
 * 例２
-```
+```rust
 use std::fmt; // Import the `fmt` module.
 
 #[derive(Debug)]
@@ -187,7 +187,7 @@ fn main() {
 ```
 
 * 例３
-```
+```rust
 use std::fmt;
 
 struct City {
