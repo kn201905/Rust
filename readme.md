@@ -50,6 +50,47 @@ cargo run
 ```
 
 ---
+# nightly の使用方法
+```
+> rustup default nightly
+（自動的に必要な toolchain のダウンロードが始まり、nightly に切り替わる）
+
+・nightly に切り替わったことの確認
+> rustc --version
+rustc 1.53.0-nightly (42816d61e 2021-04-24)
+
+> cargo --version
+cargo 1.53.0-nightly (0ed318d18 2021-04-23)
+
+> cargo +nightly run
+
+・元に戻すとき
+> rustup default stable
+
+> rustc --version
+rustc 1.51.0 (2fd73fabe 2021-03-23)
+
+> cargo --version
+cargo 1.51.0 (43b129a20 2021-03-16)
+```
+
+---
+# llvm IR について
+
+* IR の出力
+```
+> rustc main.rs --emit=llvm-ir
+
+上記で main.ll が出力される。
+main::main から追跡すると良い。
+```
+
+* IR のリファレンスマニュアル
+```
+https://llvm.org/docs/LangRef.html#bitcast-to-instruction
+```
+
+---
 # デバッグプリント
 ```rust
 #[derive(Debug)]
